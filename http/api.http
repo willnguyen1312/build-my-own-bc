@@ -2,7 +2,7 @@
 GET http://localhost:3000/blockchain HTTP/1.1
 
 ### POST request - create a new transaction
-POST http://localhost:3000/transaction HTTP/1.1
+POST http://localhost:3003/transaction/broadcast HTTP/1.1
 Content-Type: application/json
 
 {
