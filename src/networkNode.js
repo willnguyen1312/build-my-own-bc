@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const uuid = require('uuid/v1');
 
+const port = process.argv[2];
+
 const nodeAddress = uuid()
   .split('-')
   .join('');
@@ -58,4 +60,6 @@ app.get('*', (req, res) => {
   res.send('Hola!!!');
 });
 
-app.listen(3000, () => console.log('Server running in http://localhost:3000'));
+app.listen(port, () =>
+  console.log(`Server running in http://localhost:${port}`)
+);
