@@ -34,10 +34,11 @@ app.post('/transaction', (req, res) => {
 
 // broadcast transaction
 app.post('/transaction/broadcast', (req, res) => {
+  const { amount, sender, recipient } = req.body;
   const newTransaction = bitcoin.createNewTransaction(
-    req.body.amount,
-    req.body.sender,
-    req.body.recipient
+    amount,
+    sender,
+    recipient
   );
   bitcoin.addTransactionToPendingTransactions(newTransaction);
 
