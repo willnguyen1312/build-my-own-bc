@@ -1,0 +1,11 @@
+### Get request - list all node registered
+GET http://localhost:3005/blockchain HTTP/1.1
+
+### Post request - register new node
+POST http://localhost:3005/register-node HTTP/1.1
+Content-Type: application/json
+
+{
+    "newNodeUrl": "http://localhost:3002"
+}
+
